@@ -1,4 +1,4 @@
-# Project Title: Spring Cloud with Eureka
+# Spring Cloud with Eureka
 This project is a simple demonstration of a microservices architecture using Spring Cloud and Netflix's Eureka for service discovery.
 
 ## Key Concepts and Annotations
