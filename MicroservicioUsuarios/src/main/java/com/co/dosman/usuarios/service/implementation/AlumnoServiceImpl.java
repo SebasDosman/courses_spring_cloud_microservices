@@ -2,7 +2,7 @@ package com.co.dosman.usuarios.service.implementation;
 
 import com.co.dosman.usuarios.entity.Alumno;
 import com.co.dosman.usuarios.repository.AlumnoRepository;
-import com.co.dosman.usuarios.service.IAlumnoService;
+import com.co.dosman.usuarios.service.AlumnoService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,8 +12,8 @@ import java.util.Optional;
 
 @AllArgsConstructor
 @Service
-public class AlumnoService implements IAlumnoService {
-    private AlumnoRepository alumnoRepository;
+public class AlumnoServiceImpl implements AlumnoService {
+    private final AlumnoRepository alumnoRepository;
 
     @Override
     @Transactional(readOnly = true)

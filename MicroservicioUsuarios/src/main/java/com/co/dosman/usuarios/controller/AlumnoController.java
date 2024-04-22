@@ -1,7 +1,7 @@
 package com.co.dosman.usuarios.controller;
 
 import com.co.dosman.usuarios.entity.Alumno;
-import com.co.dosman.usuarios.service.implementation.AlumnoService;
+import com.co.dosman.usuarios.service.AlumnoService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +13,7 @@ import java.util.Optional;
 @AllArgsConstructor
 @RestController
 public class AlumnoController {
-    private AlumnoService alumnoService;
+    private final AlumnoService alumnoService;
 
     @GetMapping("/listarAlumnos")
     public ResponseEntity<?> listarAlumnos() {
