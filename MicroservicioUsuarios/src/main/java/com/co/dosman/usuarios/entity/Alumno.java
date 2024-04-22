@@ -14,7 +14,6 @@ import java.util.Date;
 @Entity
 @NoArgsConstructor
 @Table
-@ToString
 public class Alumno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
