@@ -57,7 +57,8 @@ git clone https://github.com/SebasDosman/eureka_api.git
 
 2. Navigate to the project directory
 ```bash
-cd your-repo
+cd MicroservicioEureka
+cd MicroservicioUsuarios
 ```
 
 3. Build the project
