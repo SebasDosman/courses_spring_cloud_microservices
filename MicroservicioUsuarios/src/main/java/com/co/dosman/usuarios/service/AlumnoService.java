@@ -6,8 +6,8 @@ import java.util.Optional;
 
 
 public interface AlumnoService {
-    public Iterable<Alumno> findAll();
-    public Optional<Alumno> findById(Long id);
-    public Alumno save(Alumno alumno);
-    public void deleteById(Long id);
+    Iterable<Alumno> findAll();
+    Optional<Alumno> findById(Long id);
+    Alumno save(Alumno alumno);
+    void deleteById(Long id);
 }
