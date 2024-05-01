@@ -40,6 +40,7 @@ This project uses a number of Spring Framework features and annotations. Here's 
 | **ResponseEntity<?>** | Represents the entire HTTP response. Good for returning file downloads. |
 | **spring.application.name=MicroservicioGateway** | This property sets the name of the application. It is used by Spring Cloud for service discovery and other tasks. |
 | **server.port=8090** | This property sets the port on which the server will listen for requests.|
+| **Fetch=FetchType.LAZY** | Indicates how the associated Student type objects are retrieved when the list is accessed. Set to LAZY, where Student objects will not be loaded immediately when the list is accessed. They will be loaded only when explicitly accessed.|
 
 ### Spring Cloud Eureka
 | Concept | Description |
