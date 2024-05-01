@@ -1,6 +1,7 @@
 package com.co.dosman.usuarios.controller;
 
-import com.co.dosman.usuarios.entity.Alumno;
+import com.co.dosman.common.controller.CommonController;
+import com.co.dosman.common.usuario.entity.Alumno;
 import com.co.dosman.usuarios.service.AlumnoService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,9 +15,7 @@ import java.util.Optional;
 
 
 @RestController
-public class AlumnoController {
-    private AlumnoService alumnoService;
-
+public class AlumnoController extends CommonController<Alumno, AlumnoService> {
     @Value("${config.balanceador.test}")
     private String balanceadorTest;
 
@@ -25,35 +24,14 @@ public class AlumnoController {
         Map<String, Object> response = new HashMap<String, Object>();
 
         response.put("balanceador", balanceadorTest);
-        response.put("alumnos", alumnoService.findAll());
+        response.put("entidades", service.findAll());
 
         return ResponseEntity.ok().body(response);
     }
 
-    @GetMapping("/listarAlumnos")
-    public ResponseEntity<?> listarAlumnos() {
-        return ResponseEntity.ok().body(alumnoService.findAll());
-    }
-
-    @GetMapping("/buscarAlumnoPorId/{id}")
-    public ResponseEntity<?> buscarAlumnoPorId(@PathVariable Long id) {
-        Optional<Alumno> alumno = alumnoService.findById(id);
-
-        if (alumno.isEmpty()) {
-            return ResponseEntity.noContent().build();
-        }
-
-        return ResponseEntity.ok().body(alumno.get());
-    }
-
-    @PostMapping("/crearAlumno")
-    public ResponseEntity<?> crearAlumno(@RequestBody Alumno alumno) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(alumnoService.save(alumno));
-    }
-
-    @PutMapping("/actualizarAlumno/{id}")
-    public ResponseEntity<?> actualizarAlumno(@PathVariable Long id, @RequestBody Alumno alumno) {
-        Optional<Alumno> alumnoGuardado = alumnoService.findById(id);
+    @PutMapping("/actualizar/{id}")
+    public ResponseEntity<?> actualizar(@PathVariable Long id, @RequestBody Alumno alumno) {
+        Optional<Alumno> alumnoGuardado = service.findById(id);
 
         if (alumnoGuardado.isEmpty()) {
             return ResponseEntity.noContent().build();
@@ -64,13 +42,6 @@ public class AlumnoController {
         alumnoActualizado.setApellido(alumno.getApellido());
         alumnoActualizado.setEmail(alumno.getEmail());
 
-        return ResponseEntity.status(HttpStatus.CREATED).body(alumnoService.save(alumnoActualizado));
-    }
-
-    @DeleteMapping("/eliminarAlumno/{id}")
-    public ResponseEntity<?> eliminarAlumno(@PathVariable Long id) {
-        alumnoService.deleteById(id);
-
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.save(alumnoActualizado));
     }
 }

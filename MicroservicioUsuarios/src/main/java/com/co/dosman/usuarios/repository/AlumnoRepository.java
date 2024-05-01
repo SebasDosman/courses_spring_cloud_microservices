@@ -1,10 +1,9 @@
 package com.co.dosman.usuarios.repository;
 
-import com.co.dosman.usuarios.entity.Alumno;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+
+import com.co.dosman.common.usuario.entity.Alumno;
 
 
-@Repository
 public interface AlumnoRepository extends CrudRepository<Alumno, Long> {
 }

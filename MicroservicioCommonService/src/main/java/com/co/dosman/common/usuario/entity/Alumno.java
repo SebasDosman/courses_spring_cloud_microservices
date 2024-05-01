@@ -1,4 +1,4 @@
-package com.co.dosman.usuarios.entity;
+package com.co.dosman.common.usuario.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -12,7 +12,7 @@ import java.util.Date;
 @Data
 @Entity
 @NoArgsConstructor
-@Table
+@Table(name = "alumno")
 public class Alumno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,7 +21,20 @@ public class Alumno {
     private String apellido;
     private String email;
 
-    @Column(name = "create_at")
+    @Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		} if (!(obj instanceof Alumno)) {
+			return false;
+		}
+		
+		Alumno alumno = (Alumno) obj;
+		
+		return this.id != null && this.id.equals(alumno.getId());
+	}
+
+	@Column(name = "create_at")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createAt;
 
