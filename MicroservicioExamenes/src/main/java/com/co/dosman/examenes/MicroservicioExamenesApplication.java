@@ -1,4 +1,4 @@
-package com.co.dosman.curso;
+package com.co.dosman.examenes;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,13 +8,13 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 
-@ComponentScan({ "com.co.dosman.common.usuario.entity" })
+@ComponentScan({ "com.co.dosman.common.entity" })
 @EnableDiscoveryClient
-@EnableJpaRepositories({ "com.co.dosman.common.usuario.entity" })
-@EntityScan({ "com.co.dosman.common.usuario.entity" }) 
+@EnableJpaRepositories({ "com.co.dosman.common.entity" })
+@EntityScan({ "com.co.dosman.common.entity" }) 
 @SpringBootApplication
-public class MicroservicioSpringCursoApplication {
+public class MicroservicioExamenesApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(MicroservicioSpringCursoApplication.class, args);
+		SpringApplication.run(MicroservicioExamenesApplication.class, args);
 	}
 }

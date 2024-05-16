@@ -1,4 +1,4 @@
-package com.co.dosman.common.usuario.entity;
+package com.co.dosman.common.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

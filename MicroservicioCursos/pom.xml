@@ -8,10 +8,10 @@
 		<version>3.2.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.co.dosman.curso</groupId>
+	<groupId>com.co.dosman.cursos</groupId>
 	<artifactId>MicroservicioCursos</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>MicroservicioSpringCurso</name>
+	<name>MicroservicioCursos</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
@@ -57,7 +57,7 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>com.co.dosman.common.usuario</groupId>
+			<groupId>com.co.dosman.common</groupId>
 			<artifactId>MicroservicioCommonService</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>

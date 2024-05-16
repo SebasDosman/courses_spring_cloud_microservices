@@ -8,7 +8,7 @@
 		<version>3.2.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.co.dosman.common.usuario</groupId>
+	<groupId>com.co.dosman.common</groupId>
 	<artifactId>MicroservicioCommonService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>MicroservicioCommonService</name>
@@ -32,13 +32,10 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>com.co.dosman.common</groupId>
+			<artifactId>MicroservicioCommon</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 </project>

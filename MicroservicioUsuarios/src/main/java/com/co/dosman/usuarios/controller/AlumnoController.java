@@ -1,7 +1,7 @@
 package com.co.dosman.usuarios.controller;
 
 import com.co.dosman.common.controller.CommonController;
-import com.co.dosman.common.usuario.entity.Alumno;
+import com.co.dosman.common.entity.Alumno;
 import com.co.dosman.usuarios.service.AlumnoService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;

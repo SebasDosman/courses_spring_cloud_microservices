@@ -1,4 +1,4 @@
-package com.co.dosman.controller;
+package com.co.dosman.cursos.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.co.dosman.common.controller.CommonController;
-import com.co.dosman.common.usuario.entity.Alumno;
-import com.co.dosman.common.usuario.entity.Curso;
-import com.co.dosman.service.CursoService;
+import com.co.dosman.common.entity.Alumno;
+import com.co.dosman.common.entity.Curso;
+import com.co.dosman.cursos.service.CursoService;
 
 
 @RestController

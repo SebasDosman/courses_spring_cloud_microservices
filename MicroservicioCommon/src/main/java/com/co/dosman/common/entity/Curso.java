@@ -1,4 +1,4 @@
-package com.co.dosman.common.usuario.entity;
+package com.co.dosman.common.entity;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -41,10 +41,6 @@ public class Curso {
     
     @OneToMany(fetch = FetchType.LAZY)
     private List<Alumno> listaAlumno;
-    
-    public Curso() {
-    	this.listaAlumno = new ArrayList<>();
-    }
     
     public void addAlumno(Alumno alumno) {
     	this.listaAlumno.add(alumno);

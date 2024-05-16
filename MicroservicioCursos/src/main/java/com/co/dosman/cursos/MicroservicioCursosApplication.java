@@ -1,4 +1,4 @@
-package com.co.dosman.usuarios;
+package com.co.dosman.cursos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,8 +13,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories({ "com.co.dosman.common.entity" })
 @EntityScan({ "com.co.dosman.common.entity" }) 
 @SpringBootApplication
-public class MicroservicioUsuariosApplication {
+public class MicroservicioCursosApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(MicroservicioUsuariosApplication.class, args);
+		SpringApplication.run(MicroservicioCursosApplication.class, args);
 	}
 }
