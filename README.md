@@ -67,12 +67,15 @@ This project uses a number of Spring Framework features and annotations. Here's 
 ### Installation
 1. Clone the repository
 ```bash
-git clone https://github.com/SebasDosman/eureka_api.git
+git clone https://github.com/SebasDosman/spring_cloud_api.git
 ```
 
 2. Navigate to the project directory
 ```bash
+cd MicroservicioCursos
 cd MicroservicioEureka
+cd MicroservicioExamenes
+cd MiroservicioGateway
 cd MicroservicioUsuarios
 ```
 
